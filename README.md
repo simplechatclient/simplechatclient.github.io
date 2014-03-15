@@ -1,4 +1,4 @@
-simplechatclient.github.com
+simplechatclient.github.io
 ===========================
 
 Simple Chat Client homepage
