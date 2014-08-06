@@ -25,56 +25,46 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/simple-chat-client-apple-icon-144x144.png" />
 	<link rel="shortcut icon" type="image/png" href="/assets/img/simple-chat-client-logo-128x128.png" />
 
-	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic">
-	<link type="text/css" rel="stylesheet" href="/assets/css/custom.css" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 	<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen" />
 	<script>$(document).ready(function() { $('.fancybox').fancybox(); });</script>
+
+	<link type="text/css" rel="stylesheet" href="/assets/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/home.css" />
 </head>
 <body itemscope itemtype="http://schema.org/SoftwareApplication">
 
 <div id="wrap">
 	<div class="container">
-		<div class="navbar navbar-inverse" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/">Simple Chat Client</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases"><span class="glyphicon glyphicon-white glyphicon-download"></span> Pobieranie</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-white glyphicon-asterisk"></span> Development <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-								<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient"><span class="glyphicon glyphicon-globe"></span> GitHub</a></li>
-								<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/commits/master"><span class="glyphicon glyphicon-random"></span> Historia</a></li>
-								<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues/new"><span class="glyphicon glyphicon-pencil"></span> Zgłoś błąd</a></li>
-								<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues"><span class="glyphicon glyphicon-tasks"></span> Zgłoszenia</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+		<nav>
+			<a class="btn btn-default" itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases">Pobieranie</a>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Development <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient">GitHub</a></li>
+					<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/commits/master">Historia</a></li>
+					<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues/new">Zgłoś błąd</a></li>
+					<li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues">Zgłoszenia</a></li>
+				</ul>
 			</div>
-		</div>
-		<div class="row">
+		</nav>
+		<div id="home" class="row">
 			<div class="col-md-9 content">
 				<h2 itemprop="name" class="title center">Simple Chat Client</h2>
-				<div itemprop="description" class="about">Simple Chat Client to darmowy i otwarty, wieloplatformowy komunikator do rozmów na czacie czat.onet.pl.<br/><br/>Działa na platformach: Windows, Linux, oraz innych opartych na Unix.<br/><br/>Simple Chat Client obsługuje pliki językowe, co pozwala na zmianę języka interfejsu użytkownika. Aktualnie dostępna jest polska i angielska wersja językowa.<br/><br/>Całkowicie za darmo, zero reklam, zero oprogramowania szpiegującego i żadnego śledzenia użytkownika.<br/><br/>Simple Chat Client posiada otwarty kod źródłowy udostępniony na <a href="https://github.com/simplechatclient/simplechatclient" rel="nofollow">https://github.com/simplechatclient</a>.</div>
+				<div itemprop="description" id="about">Simple Chat Client to darmowy i otwarty, wieloplatformowy komunikator do rozmów na czacie czat.onet.pl.<br/><br/>Działa na platformach: Windows, Linux, oraz innych opartych na Unix.<br/><br/>Simple Chat Client obsługuje pliki językowe, co pozwala na zmianę języka interfejsu użytkownika. Aktualnie dostępna jest polska i angielska wersja językowa.<br/><br/>Całkowicie za darmo, zero reklam, zero oprogramowania szpiegującego i żadnego śledzenia użytkownika.<br/><br/>Simple Chat Client posiada otwarty kod źródłowy udostępniony na <a href="https://github.com/simplechatclient/simplechatclient" rel="nofollow">https://github.com/simplechatclient</a>.</div>
 			</div>
 			<div class="col-md-3 center">
 				<a class="fancybox" href="/assets/img/screenshot.png" rel="nofollow" title="Simple Chat Client">
-					<img itemprop="image" class="screenshot" src="/assets/img/screenshot.png" alt="Simple Chat Client screenshot" width="200" height="155" />
+					<img itemprop="image" id="screenshot" src="/assets/img/screenshot.png" alt="Simple Chat Client screenshot" width="200" height="155" />
 				</a>
 			</div>
 		</div>
