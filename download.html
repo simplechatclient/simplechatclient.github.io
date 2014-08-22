@@ -15,7 +15,7 @@
 
 	<meta name="google-site-verification" content="ya-qujgxFF0XOIxwS9BfV50AM0rb8-hz58ytQihPzE0" />
 
-	<meta name="description" content="Simple Chat Client to darmowy i otwarty, wieloplatformowy komunikator do rozmów na czacie czat.onet.pl" />
+	<meta name="description" content="Pobierz najnowszą wersję komunikatora Simple Chat Client dostępnego na systemy Windows oraz Linux" />
 	<meta name="keywords" content="scc, occ, simple chat client, chat client, simple client, client, client onet, czat onet client, czat onet, onet czat client, komunikator onet, czat komunikator, onet program" />
 
 	<link rel="apple-touch-icon" href="/assets/img/simple-chat-client-apple-icon-57x57.png" />
@@ -27,16 +27,13 @@
 
 	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic">
+	<link type="text/css" rel="stylesheet" href="/assets/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/download.css" />
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-	<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen" />
-	<script>$(document).ready(function() { $('.fancybox').fancybox(); });</script>
-
-	<link type="text/css" rel="stylesheet" href="/assets/css/style.css" />
-	<link type="text/css" rel="stylesheet" href="/assets/css/home.css" />
+	<script src="/assets/js/detectmobilebrowser.js"></script>
+	<script src="/assets/js/download.js"></script>
 </head>
 <body itemscope itemtype="http://schema.org/SoftwareApplication">
 
@@ -57,15 +54,94 @@
 				</ul>
 			</div>
 		</nav>
-		<div id="home" class="row">
-			<div class="col-md-9 content">
-				<h2 itemprop="name" class="title center">Simple Chat Client</h2>
-				<div itemprop="description" id="about">Simple Chat Client to darmowy i otwarty, wieloplatformowy komunikator do rozmów na czacie czat.onet.pl.<br/><br/>Działa na platformach: Windows, Linux, oraz innych opartych na Unix.<br/><br/>Simple Chat Client obsługuje pliki językowe, co pozwala na zmianę języka interfejsu użytkownika. Aktualnie dostępna jest polska i angielska wersja językowa.<br/><br/>Całkowicie za darmo, zero reklam, zero oprogramowania szpiegującego i żadnego śledzenia użytkownika.<br/><br/>Simple Chat Client posiada otwarty kod źródłowy udostępniony na <a href="https://github.com/simplechatclient/simplechatclient" rel="nofollow">https://github.com/simplechatclient</a>.</div>
+		<div id="download">
+			<div id="windows" style="display:none;" class="content">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 itemprop="name" class="center download-title">
+							Pobierz Simple Chat Client dla windows:
+						</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-big btn btn-default btn-lg"><a itemprop="downloadUrl" href="//github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.exe">Pobierz</a></div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-3 center">
-				<a class="fancybox" href="/assets/img/screenshot.png" rel="nofollow" title="Simple Chat Client">
-					<img itemprop="image" id="screenshot" src="/assets/img/screenshot.png" alt="Simple Chat Client screenshot" width="200" height="155" />
-				</a>
+
+			<div id="linux" style="display:none;" class="content">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 itemprop="name" class="center download-title">
+							Pobierz Simple Chat Client dla linux:
+						</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-small btn btn-default"><img src="/assets/img/deb.png" width="24" height="24" alt="deb" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="//github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.i386.deb">Pobierz DEB i386</a></div>
+							<div class="download-small btn btn-default"><img src="/assets/img/deb.png" width="24" height="24" alt="deb64" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="//github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.amd64.deb">Pobierz DEB amd64</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-small btn btn-default"><img src="/assets/img/rpm.png" width="24" height="24" alt="rpm" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="//github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.i386.rpm">Pobierz RPM i386</a></div>
+							<div class="download-small btn btn-default"><img src="/assets/img/rpm.png" width="24" height="24" alt="rpm64" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="//github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.amd64.rpm">Pobierz RPM amd64</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-small btn btn-default"><img src="/assets/img/tar.png" width="24" height="24" alt="tar" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="">Pobierz TAR</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+			<div id="mobile" style="display:none;" class="content">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 itemprop="name" class="center download-title">
+							Pobierz Simple Chat Client dla android:
+						</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-big btn btn-default btn-lg"><a href="javascript:void(0)" rel="nofollow">Pobierz</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+
+			<div id="other_systems_row" class="content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div id="other_systems" class="download-mini btn btn-info btn-sm">Inny system</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="more" style="display:none;" class="content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="center">
+							<div class="download-mini btn btn-info btn-sm"><a href="//github.com/simplechatclient/simplechatclient/releases/tag/1.9.0">Więcej</a></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

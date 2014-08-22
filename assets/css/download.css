@@ -1,0 +1,10 @@
+body{background: url(/assets/img/download.jpg) no-repeat fixed center;}
+#download{margin-top: 10%;}
+
+.download-title{margin-top:25px;margin-bottom:25px;}
+.download-big {width:180px;}
+.download-big a{color:inherit;text-decoration: none;}
+.download-small{margin:3px;width:180px;}
+.download-small a{color:inherit;text-decoration: none;}
+.download-mini{margin:20px;font-size:10px;}
+.download-mini a{color:inherit;text-decoration: none;}
