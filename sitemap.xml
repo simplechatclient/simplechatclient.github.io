@@ -13,5 +13,9 @@
   <loc>http://simplechatclient.github.io/download.html</loc>
   <changefreq>daily</changefreq>
 </url>
+<url>
+  <loc>http://simplechatclient.github.io/donate.html</loc>
+  <changefreq>daily</changefreq>
+</url>
 
 </urlset>
