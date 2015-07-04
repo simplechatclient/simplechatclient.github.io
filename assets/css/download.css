@@ -1,5 +1,6 @@
 /*body{background: url(/assets/img/download.jpg) no-repeat fixed center;}*/
 #download{margin-top: 10%;}
+#footer{display:none;}
 
 .download-title{margin-top:25px;margin-bottom:25px;}
 .download-big {width:180px;}
