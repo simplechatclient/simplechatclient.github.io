@@ -1,4 +1,4 @@
-require(['jquery', 'bootstrap', 'fancybox'], function($, bootstrap, fancybox){
+define(['jquery', 'bootstrap', 'fancybox'], function($, bootstrap, fancybox){
 
 	$(document).ready(function() {
 		fancybox();
