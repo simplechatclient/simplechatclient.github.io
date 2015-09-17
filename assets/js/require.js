@@ -1,9 +1,9 @@
 require.config({
   paths: {
   	baseUrl: '/assets/js'
-    jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-    bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js',
-    fancybox: '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js'
+    jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min',
+    bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min',
+    fancybox: '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack'
   }
 });
 
