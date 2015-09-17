@@ -1,48 +1,10 @@
 require.config({
   paths: {
+  	baseUrl: '/assets/js'
     jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
     bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js',
     fancybox: '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js'
   }
-});
-
-require(['jquery', 'bootstrap', 'fancybox', 'scc'], function($, bootstrap, fancybox){
-
-	$(document).ready(function() {
-		fancybox();
-		platform();
-		buttons();
-	});
-
-	function fancybox()
-	{
-		if(typeof $.fancybox == 'function') {
-			$('.fancybox').fancybox();
-		}
-	}
-
-	function platform()
-	{
-		var isMobile = jQuery.browser.mobile;
-		var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
-		
-		if (isMobile) { $('#mobile').show(); }
-		else if (isWindows) { $('#windows').show(); }
-		else { $('#linux').show(); }
-	}
-
-	function buttons()
-	{
-		$('#other_systems').click(function() {
-			$('#windows').show();
-			$('#linux').show();
-			$('#mobile').show();
-			
-			$('#more').show();
-			$('#other_systems_row').hide();
-		});
-	}
-
 });
 
 // google analytics
