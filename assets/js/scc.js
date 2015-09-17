@@ -7,7 +7,9 @@ $(document).ready(function() {
 
 function fancybox()
 {
-	$('.fancybox').fancybox();
+	if(typeof $.fancybox == 'function') {
+		$('.fancybox').fancybox();
+	}
 }
 
 function platform()
