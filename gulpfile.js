@@ -49,7 +49,7 @@ gulp.task('scss-min', function () {
 gulp.task('js-min', function () {
   return gulp.src(Paths.JS)
     .pipe(concat(Paths.JS_CONCAT))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(Paths.DIST_JS))
 });
 
