@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "simplechatclient.github.io",
+  "version": "1.0.0",
+  "description": "simplechatclient.github.io",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "jquery": "2.x",
+    "fancybox": "2.x",
+    "bootstrap-sass": "3.x",
+    "gulp": "latest",
+	"gulp-sass":"latest",
+	"gulp-autoprefixer":"latest",
+	"gulp-sourcemaps":"latest",
+	"gulp-cssnano":"latest",
+	"gulp-uglify":"latest",
+	"gulp-imagemin":"latest",
+	"gulp-concat":"latest",
+	"gulp-clean":"latest"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplechatclient/simplechatclient.git"
+  },
+  "author": "",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/simplechatclient/simplechatclient/issues"
+  },
+  "homepage": "https://simplechatclient.github.io/"
+}
