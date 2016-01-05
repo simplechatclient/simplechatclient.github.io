@@ -5,7 +5,7 @@ var nano         = require('gulp-cssnano')
 var uglify       = require('gulp-uglify')
 var imagemin     = require('gulp-imagemin')
 var concat       = require('gulp-concat')
-var clean        = require('gulp-clean');
+var clean        = require('gulp-clean')
 
 var Paths = {
   SCSS                 : '_assets/scss/**/*',
@@ -25,13 +25,13 @@ var Paths = {
   DIST_FONTS           : 'assets/fonts/bootstrap',
 }
 
-gulp.task('default', ['clean', 'img-min', 'js-min', 'scss-min', 'copy-fonts'])
+gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'copy-fonts'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.JS,   ['js-min']);
 });
 
-gulp.task('clean', function () {
+gulp.task('clean-project', function () {
   return gulp.src(Paths.DIST, {read: false})
     .pipe(clean());
 });
