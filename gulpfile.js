@@ -1,7 +1,6 @@
 var gulp         = require('gulp')
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer')
-var sourcemaps   = require('gulp-sourcemaps')
 var nano         = require('gulp-cssnano')
 var uglify       = require('gulp-uglify')
 var imagemin     = require('gulp-imagemin')
@@ -9,9 +8,9 @@ var concat       = require('gulp-concat')
 var clean        = require('gulp-clean');
 
 var Paths = {
-  HERE                 : './',
   SCSS                 : '_assets/scss/**/*',
   IMG                  : '_assets/img/**/*',
+  FONTS                : '_assets/fonts/bootstrap/*',
   JS                   : [
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
@@ -22,10 +21,11 @@ var Paths = {
   DIST                 : 'assets',
   DIST_JS              : 'assets/js',
   DIST_CSS             : 'assets/css',
-  DIST_IMAGES          : 'assets/img'
+  DIST_IMAGES          : 'assets/img',
+  DIST_FONTS           : 'assets/fonts/bootstrap',
 }
 
-gulp.task('default', ['clean', 'img-min', 'js-min', 'scss-min'])
+gulp.task('default', ['clean', 'img-min', 'js-min', 'scss-min', 'copy-fonts'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.JS,   ['js-min']);
@@ -38,11 +38,9 @@ gulp.task('clean', function () {
 
 gulp.task('scss-min', function () {
   return gulp.src(Paths.SCSS)
-    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(nano())
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST_CSS))
 });
 
@@ -57,4 +55,9 @@ gulp.task('img-min', function(){
   return gulp.src(Paths.IMG)
   .pipe(imagemin())
   .pipe(gulp.dest(Paths.DIST_IMAGES))
+});
+
+gulp.task('copy-fonts', function(){
+  return gulp.src(Paths.FONTS)
+  .pipe(gulp.dest(Paths.DIST_FONTS))
 });
