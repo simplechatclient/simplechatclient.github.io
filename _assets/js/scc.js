@@ -1,23 +1,32 @@
 $(document).ready(function() {
-	force_https();
-	fancybox();
-	platform();
-	buttons();
-	google_analytics();
+	var redirect = force_https();
+	if (redirect === false)
+	{
+		fancybox();
+		platform();
+		buttons();
+		google_analytics();
+		facebook();
+		twitter();
+	}
 });
 
+/*
 $(window).load(function() {
 	facebook();
 	twitter();
 });
+*/
 
 function force_https()
 {
 	if (detect_bot() === false) {
 		if (window.location.protocol != "https:") {
 			window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+			return true;
 		}
 	}
+	return false;
 }
 
 function fancybox()
