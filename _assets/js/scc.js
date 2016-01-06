@@ -6,17 +6,9 @@ $(document).ready(function() {
 		platform();
 		buttons();
 		google_analytics();
-		facebook();
-		twitter();
+		window.setTimeout(facebook_and_twitter, 3000); // 3sec
 	}
 });
-
-/*
-$(window).load(function() {
-	facebook();
-	twitter();
-});
-*/
 
 function force_https()
 {
@@ -87,6 +79,12 @@ function google_analytics()
 
 	ga('create', 'UA-64667530-1', 'auto');
 	ga('send', 'pageview');
+}
+
+function facebook_and_twitter()
+{
+	facebook();
+	twitter();
 }
 
 function twitter()
