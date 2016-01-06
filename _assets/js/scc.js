@@ -65,6 +65,8 @@ function platform()
 	if (isMobile) { $('#mobile').show(); }
 	else if (isWindows) { $('#windows').show(); }
 	else { $('#linux').show(); }
+	
+	$('#other_systems_box').show();
 }
 
 function buttons()
@@ -75,7 +77,7 @@ function buttons()
 		$('#mobile').show();
 		
 		$('#more').show();
-		$('#other_systems_row').hide();
+		$('#other_systems_box').hide();
 	});
 }
 
