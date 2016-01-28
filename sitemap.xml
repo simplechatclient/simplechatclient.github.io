@@ -6,15 +6,15 @@
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://simplechatclient.github.io/</loc>
+  <loc>https://simplechatclient.github.io/</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://simplechatclient.github.io/download.html</loc>
+  <loc>https://simplechatclient.github.io/download.html</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://simplechatclient.github.io/donate.html</loc>
+  <loc>https://simplechatclient.github.io/donate.html</loc>
   <changefreq>daily</changefreq>
 </url>
 
