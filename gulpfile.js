@@ -5,7 +5,7 @@ var nano         = require('gulp-cssnano')
 var uglify       = require('gulp-uglify')
 var imagemin     = require('gulp-imagemin')
 var concat       = require('gulp-concat')
-var clean        = require('gulp-clean')
+var del          = require('del');
 
 var Paths = {
   SCSS                 : '_assets/scss/**/*',
@@ -18,22 +18,21 @@ var Paths = {
       '_assets/js/**/*'
     ],
   JS_CONCAT            : 'scc.js',
-  DIST                 : 'assets',
+  DIST_RECURSIVE       : 'assets/**/*',
   DIST_JS              : 'assets/js',
   DIST_CSS             : 'assets/css',
   DIST_IMAGES          : 'assets/img',
   DIST_FONTS           : 'assets/fonts/bootstrap',
 }
 
-gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'copy-fonts'])
+gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'copy-fonts']);
 
 gulp.task('watch', function () {
-  gulp.watch(Paths.JS,   ['js-min']);
+  gulp.watch(Paths.JS, ['js-min']);
 });
 
 gulp.task('clean-project', function () {
-  return gulp.src(Paths.DIST, {read: false})
-    .pipe(clean());
+  return del.sync([Paths.DIST_RECURSIVE]);
 });
 
 gulp.task('scss-min', function () {
