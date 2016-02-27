@@ -53,7 +53,7 @@ gulp.task('js-min', function () {
 
 gulp.task('img-min', function(){
   return gulp.src(Paths.IMG)
-  .pipe(imagemin())
+  .pipe(imagemin({progressive: true}))
   .pipe(gulp.dest(Paths.DIST_IMAGES))
 });
 
