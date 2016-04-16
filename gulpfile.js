@@ -1,10 +1,10 @@
-var gulp         = require('gulp')
+var gulp         = require('gulp');
 var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer')
-var nano         = require('gulp-cssnano')
-var uglify       = require('gulp-uglify')
-var imagemin     = require('gulp-imagemin')
-var concat       = require('gulp-concat')
+var autoprefixer = require('gulp-autoprefixer');
+var nano         = require('gulp-cssnano');
+var uglify       = require('gulp-uglify');
+var imagemin     = require('gulp-imagemin');
+var concat       = require('gulp-concat');
 var del          = require('del');
 
 var Paths = {
@@ -22,8 +22,8 @@ var Paths = {
   DIST_JS              : 'assets/js',
   DIST_CSS             : 'assets/css',
   DIST_IMAGES          : 'assets/img',
-  DIST_FONTS           : 'assets/fonts/bootstrap',
-}
+  DIST_FONTS           : 'assets/fonts/bootstrap'
+};
 
 gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'copy-fonts']);
 
