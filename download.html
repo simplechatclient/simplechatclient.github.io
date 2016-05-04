@@ -50,118 +50,98 @@
     <link type="text/css" rel="stylesheet" href="https://simplechatclient.github.io/assets/css/scc.css" />
 
     <noscript>
-        <style type="text/css">#windows {display:block !important;} #linux {display:block !important;} #other_systems_box {display:block !important;} #more {display:block !important;}</style>
+        <style type="text/css">.windows {display:block !important;} .linux {display:block !important;} #other_systems_box {display:block !important;} #more {display:block !important;}</style>
     </noscript>
 
 </head>
-<body itemscope itemtype="https://schema.org/SoftwareApplication">
+<body itemscope itemtype="https://schema.org/SoftwareApplication" ng-app="SccApp" ng-cloak>
 <!-- Facebook --><div id="fb-root"></div>
 
-<div id="wrap">
-    <div class="container">
-        <nav>
-            <a class="btn btn-default btn-bold" itemprop="downloadUrl" href="https://simplechatclient.github.io/download">Pobieranie</a>
-            <a class="btn btn-default hidden-xs" itemprop="url" href="https://simplechatclient.github.io/faq">Faq</a>
+<div class="top-menu" layout="row" layout-align="center center">
+    <div><md-button class="md-raised" itemprop="downloadUrl" href="https://simplechatclient.github.io/download">Pobieranie</md-button></div>
+    <div><md-button class="md-raised" itemprop="url" href="https://simplechatclient.github.io/faq">Faq</md-button></div>
+    <div hide show-gt-sm><md-button class="md-raised" itemprop="url" href="https://github.com/simplechatclient/simplechatclient">Development</md-button></div>
+</div>
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Development <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient">GitHub</a></li>
-                    <li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/releases">Historia</a></li>
-                    <li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues/new">Zgłoś błąd</a></li>
-                    <li><a itemprop="url" href="https://github.com/simplechatclient/simplechatclient/issues">Zgłoszenia</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="download">
-            <div id="windows" style="display:none;" class="content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 itemprop="name" class="center download-title">
-                            Pobierz Simple Chat Client dla windows:
-                        </h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div class="download-big btn btn-default btn-lg"><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases/download/2.2.0/scc-2.2.0.0.exe">Pobierz</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="linux" style="display:none;" class="content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 itemprop="name" class="center download-title">
-                            Pobierz Simple Chat Client dla linux:
-                        </h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div class="download-small btn btn-default"><img src="https://simplechatclient.github.io/assets/img/deb.png" width="24" height="24" alt="deb" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.1.i386.deb">Pobierz DEB i386</a></div>
-                            <div class="download-small btn btn-default"><img src="https://simplechatclient.github.io/assets/img/deb.png" width="24" height="24" alt="deb64" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.1.amd64.deb">Pobierz DEB amd64</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div class="download-small btn btn-default"><img src="https://simplechatclient.github.io/assets/img/rpm.png" width="24" height="24" alt="rpm" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.i386.rpm">Pobierz RPM i386</a></div>
-                            <div class="download-small btn btn-default"><img src="https://simplechatclient.github.io/assets/img/rpm.png" width="24" height="24" alt="rpm64" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.amd64.rpm">Pobierz RPM amd64</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div class="download-small btn btn-default"><img src="https://simplechatclient.github.io/assets/img/tar.png" width="24" height="24" alt="tar" style="vertical-align:middle;" /><a itemprop="downloadUrl" href="https://github.com/simplechatclient/simplechatclient/archive/1.9.0.tar.gz">Pobierz TAR</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="other_systems_box" style="display:none;" class="content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div id="other_systems" class="download-mini btn btn-info btn-sm">Inny system</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="more" style="display:none;" class="content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center">
-                            <div class="download-mini btn btn-info btn-sm"><a href="https://github.com/simplechatclient/simplechatclient/releases">Więcej</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- windows -->
+<div layout="row" layout-align="center center" layout-xs="column" class="content windows" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <h2 itemprop="name" class="md-headline">
+                Pobierz Simple Chat Client dla windows:
+            </h2>
+        </md-content>
+    </div>
+</div>
+<div layout="row" layout-align="center center" layout-xs="column" class="content windows" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/releases/download/2.2.0/scc-2.2.0.0.exe" class="md-raised" itemprop="downloadUrl">Pobierz</md-button>
+        </md-content>
     </div>
 </div>
 
-<div id="footer" class="hidden-xs">
-    <div class="container">
-        <div class="muted credit" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <div>&copy; 2016 <span itemprop="name">Piotr Łuczko</span></div>
-            <div>
-                <div class="fb-like" data-href="https://www.facebook.com/SimpleChatClient" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.facebook.com/SimpleChatClient" data-count="none" data-hashtags="simplechatclient"></a>
+<!-- linux -->
+<div layout="row" layout-align="center center" layout-xs="column" class="content linux" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <h2 itemprop="name"  class="md-headline">
+                Pobierz Simple Chat Client dla linux:
+            </h2>
+        </md-content>
+    </div>
+</div>
+<div layout="row" layout-align="center center" layout-xs="column" class="content linux" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.1.i386.deb" class="md-raised" itemprop="downloadUrl"><img src="https://simplechatclient.github.io/assets/img/deb.png" width="24" height="24" alt="deb" style="vertical-align:middle;" /> Pobierz DEB i386</md-button>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.1.amd64.deb" class="md-raised" itemprop="downloadUrl"><img src="https://simplechatclient.github.io/assets/img/deb.png" width="24" height="24" alt="deb64" style="vertical-align:middle;" /> Pobierz DEB amd64</md-button>
+        </md-content>
+    </div>
+</div>
+<div layout="row" layout-align="center center" layout-xs="column" class="content linux" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.i386.rpm" class="md-raised" itemprop="downloadUrl"><img src="https://simplechatclient.github.io/assets/img/rpm.png" width="24" height="24" alt="deb" style="vertical-align:middle;" /> Pobierz RPM i386</md-button>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/releases/download/1.9.0/scc-1.9.0.0.amd64.rpm" class="md-raised" itemprop="downloadUrl"><img src="https://simplechatclient.github.io/assets/img/rpm.png" width="24" height="24" alt="deb64" style="vertical-align:middle;" /> Pobierz RPM amd64</md-button>
+        </md-content>
+    </div>
+</div>
+<div layout="row" layout-align="center center" layout-xs="column" class="content linux" style="display:none;">
+    <div>
+        <md-content flex layout-padding>
+            <md-button href="https://github.com/simplechatclient/simplechatclient/archive/1.9.0.tar.gz" class="md-raised" itemprop="downloadUrl"><img src="https://simplechatclient.github.io/assets/img/tar.png" width="24" height="24" alt="deb64" style="vertical-align:middle;" /> Pobierz TAR</md-button>
+        </md-content>
+    </div>
+</div>
+
+
+<div id="other_systems_box" layout="row" layout-align="center center" layout-xs="column">
+    <md-button id="other_systems" class="md-raised md-primary">Inny system</md-button>
+</div>
+
+<div layout="row" layout-align="center center" layout-xs="column">
+    <md-button href="https://github.com/simplechatclient/simplechatclient/releases" class="md-raised md-primary">Więcej</md-button>
+</div>
+
+
+<div layout="row" layout-align="center center" layout-xs="column" hide show-gt-sm class="credit">
+    <div>
+        <md-content flex layout-padding>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <div>&copy; 2016 <span itemprop="name">Piotr Łuczko</span></div>
+                <div>
+                    <div class="fb-like" data-href="https://www.facebook.com/SimpleChatClient" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.facebook.com/SimpleChatClient" data-count="none" data-hashtags="simplechatclient"></a>
+                </div>
             </div>
-        </div>
+        </md-content>
     </div>
 </div>
 
 <script src="https://simplechatclient.github.io/assets/js/scc.js"></script>
+<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script async>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

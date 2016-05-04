@@ -8,24 +8,28 @@ var concat       = require('gulp-concat');
 var del          = require('del');
 
 var Paths = {
-  SCSS                 : '_assets/scss/**/*',
+  SCSS                 : [
+      'node_modules/angular-material/angular-material.scss',
+      '_assets/scss/**/*'
+  ],
   IMG                  : '_assets/img/**/*',
-  FONTS                : '_assets/fonts/bootstrap/*',
   JS                   : [
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-      'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
+      'node_modules/angular/angular.min.js',
+      'node_modules/angular-animate/angular-animate.min.js',
+      'node_modules/angular-aria/angular-aria.min.js',
+      'node_modules/angular-material/angular-material.js',
       '_assets/js/**/*'
     ],
   JS_CONCAT            : 'scc.js',
+  CSS_CONCAT           : 'scc.css',
   DIST_RECURSIVE       : 'assets/**/*',
   DIST_JS              : 'assets/js',
   DIST_CSS             : 'assets/css',
-  DIST_IMAGES          : 'assets/img',
-  DIST_FONTS           : 'assets/fonts/bootstrap'
+  DIST_IMAGES          : 'assets/img'
 };
 
-gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'copy-fonts']);
+gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min']);
 
 gulp.task('watch', function () {
   gulp.watch(Paths.JS, ['js-min']);
@@ -40,6 +44,7 @@ gulp.task('scss-min', function () {
     .pipe(sass())
     .pipe(nano())
     .pipe(autoprefixer())
+    .pipe(concat(Paths.CSS_CONCAT))
     .pipe(gulp.dest(Paths.DIST_CSS))
 });
 
@@ -54,9 +59,4 @@ gulp.task('img-min', function(){
   return gulp.src(Paths.IMG)
   .pipe(imagemin({progressive: true}))
   .pipe(gulp.dest(Paths.DIST_IMAGES))
-});
-
-gulp.task('copy-fonts', function(){
-  return gulp.src(Paths.FONTS)
-  .pipe(gulp.dest(Paths.DIST_FONTS))
 });
