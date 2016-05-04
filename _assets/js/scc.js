@@ -3,13 +3,13 @@
 angular.module('SccApp', ['ngMaterial']);
 
 $(document).ready(function () {
-	// var redirect = force_https();
-	// if (redirect === false)
-	// {
-	platform();
-	buttons();
-	google_analytics();
-	// }
+	var redirect = force_https();
+	if (redirect === false)
+	{
+		platform();
+		buttons();
+		google_analytics();
+	}
 });
 
 
