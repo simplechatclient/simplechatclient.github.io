@@ -14,7 +14,6 @@ var Paths = {
   ],
   IMG                  : '_assets/img/**/*',
   JS                   : [
-      'node_modules/jquery/dist/jquery.min.js',
       'node_modules/angular/angular.min.js',
       'node_modules/angular-animate/angular-animate.min.js',
       'node_modules/angular-aria/angular-aria.min.js',
@@ -26,10 +25,12 @@ var Paths = {
   DIST_RECURSIVE       : 'assets/**/*',
   DIST_JS              : 'assets/js',
   DIST_CSS             : 'assets/css',
-  DIST_IMAGES          : 'assets/img'
+  DIST_IMAGES          : 'assets/img',
+  JS_FACEBOOK          : '_assets/js/facebook.js',
+  JS_TWITTER          : '_assets/js/twitter.js'
 };
 
-gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min']);
+gulp.task('default', ['clean-project', 'img-min', 'js-min', 'scss-min', 'twitter-copy', 'facebook-copy']);
 
 gulp.task('watch', function () {
   gulp.watch(Paths.JS, ['js-min']);
@@ -59,4 +60,16 @@ gulp.task('img-min', function(){
   return gulp.src(Paths.IMG)
   .pipe(imagemin({progressive: true}))
   .pipe(gulp.dest(Paths.DIST_IMAGES))
+});
+
+gulp.task('facebook-copy', function () {
+  return gulp.src(Paths.JS_FACEBOOK)
+    .pipe(uglify())
+    .pipe(gulp.dest(Paths.DIST_JS));
+});
+
+gulp.task('twitter-copy', function () {
+  return gulp.src(Paths.JS_TWITTER)
+    .pipe(uglify())
+    .pipe(gulp.dest(Paths.DIST_JS));
 });
