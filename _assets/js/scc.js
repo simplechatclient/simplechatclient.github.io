@@ -3,26 +3,12 @@
 angular.module('SccApp', ['ngMaterial']);
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    var redirect = force_https();
-    if (redirect === false)
-    {
-        var downloadPage = document.getElementById('downloadPage');
-        if (downloadPage != null) {
-            show_download_button_per_platform();
-            show_all_download_buttons();
-        }
-    }
-});
-
-function force_https()
-{
-	if (window.location.protocol != "https:") {
-		window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-		return true;
+	var downloadPage = document.getElementById('downloadPage');
+	if (downloadPage != null) {
+		show_download_button_per_platform();
+		show_all_download_buttons();
 	}
-
-	return false;
-}
+});
 
 function browser_mobile()
 {
