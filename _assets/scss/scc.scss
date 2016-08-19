@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body {
+body, html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857;
+  background-color: #ffffff;
 }
 
 a {
@@ -12,7 +13,7 @@ a {
 }
 
 a.md-button.md-default-theme.md-raised, a.md-button.md-raised, .md-button.md-default-theme.md-raised, .md-button.md-raised {
-  background-color: #fff;
+  background-color: #ffffff;
   font-weight: 600;
 }
 
@@ -25,7 +26,7 @@ h2 {
   font-size: 1.015rem;
   line-height: 1.5rem;
   font-weight: 400;
-  color: #000;
+  color: #000000;
 }
 
 .top-menu {
