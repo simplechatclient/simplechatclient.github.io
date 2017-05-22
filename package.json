@@ -23,7 +23,9 @@
     "angular-material": "^1.0.8"
   },
   "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+    "build": "gulp"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simplechatclient/simplechatclient.git"
